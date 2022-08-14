@@ -12,6 +12,10 @@ export const getToken = () => {
 };
 
 export const saveUser = user => {
+  saveStorage(userKey, user);
+};
+
+export const getUsername = () => {
   const user = getStorage(userKey);
   if (user) {
     return user.username;

@@ -16,7 +16,7 @@ const createMenu = () => {
   navbar.innerHTML = `
         <nav class="navbar-menu">
             <a href="/" class="navbar-menu-item ${
-              pathname === '/' || pathname === 'index.html' ? 'active' : ''
+              pathname === 'index.html' ? 'active' : ''
             }">Home</a>
             <a href="/posts.html" class="navbar-menu-item ${
               pathname === '/posts.html' ? 'active' : ''
