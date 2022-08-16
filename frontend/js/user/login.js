@@ -52,7 +52,7 @@ const login = async (username, password) => {
       saveToken(data.jwt);
       saveUser(data.user);
 
-      location.href = '/dashboard.html';
+      location.href = '/admin.html';
     }
     if (data.error) {
       displayMessage(

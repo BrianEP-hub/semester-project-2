@@ -7,10 +7,15 @@ const createMenu = () => {
 
   const username = getUsername();
 
+  let authLink = `<a href="login.html" class="navbar-menu-item ${
+    pathname === '/login.html' ? 'active' : ''
+  }">Login</a>`;
+
   if (username) {
-    let authLink = `<a href="login.html" class="navbar-menu-item" ${
+    authLink = `<a href="dashboard.html" class="navbar-menu-item-auth ${
       pathname === '/dashboard.html' ? 'active' : ''
-    }${username}</a> <button id="logout">Logout${username}</button>`;
+    }">${username}</a> <button id="logout">Logout ${username}</button>
+    `;
   }
 
   navbar.innerHTML = `
@@ -20,7 +25,8 @@ const createMenu = () => {
             }">Home</a>
             <a href="/posts.html" class="navbar-menu-item ${
               pathname === '/posts.html' ? 'active' : ''
-            }>Posts</a> 
+            }">Posts</a>
+            ${authLink}
         </nav>
     `;
 
