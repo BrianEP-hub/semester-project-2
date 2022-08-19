@@ -6,7 +6,7 @@ createMenu();
 
 const postUrl = baseUrl + '/posts';
 
-async () => {
+(async () => {
   try {
     const resp = await fetch(postUrl);
     const data = await resp.json();
@@ -19,4 +19,4 @@ async () => {
   } catch (error) {
     console.error(error);
   }
-};
+})();
