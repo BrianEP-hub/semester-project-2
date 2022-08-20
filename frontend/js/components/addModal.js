@@ -1,4 +1,4 @@
-import { addProduct } from '../utilities/addProduct.js';
+import { addPost } from '../utils/newPost.js';
 
 export const addModal = () => {
   const button = document.querySelector('#add');
@@ -13,5 +13,5 @@ export const addModal = () => {
   close.onclick = () => {
     container.style.display = 'none';
   };
-  addProduct;
+  addPost;
 };

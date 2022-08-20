@@ -14,7 +14,39 @@
   </head>
   <body>
     <div class="navbar"></div>
+    <div class="container-posts"></div>
+    <div class="container-admin"></div>
+    <div class="modal-add-posts">
+      <div class="modal-add-posts-content">
+        <span class="close">&times;</span>
+        <h2>Add product</h2>
+        <form id="addPost">
+          <div class="container-message"></div>
+          <div>
+            <label for="title">Title</label>
+            <input id="title" type="text" />
+          </div>
+          <div>
+            <label for="shortInfo">Short text</label>
+            <textarea id="shortInfo"></textarea>
+          </div>
+          <div>
+            <label for="longInfo">Post text</label>
+            <textarea id="longInfo"></textarea>
+          </div>
+          <div>
+            <label for="featured">Featured</label>
+            <select name="featured" id="featured">
+              <option value="true">Yes</option>
+              <option value="false">No</option>
+            </select>
+          </div>
+          <button class="button-add">Add</button>
+        </form>
+    </div>
     <script src="js/index.js" type="module"></script>
+    <script src="js/utils/newPost.js" type="module"></script>
+    <script src="js/utils/adminPage.js" type="module"></script>
     <noscript> Please ensure that you have JavaScript enabled</noscript>
   </body>
 </html>

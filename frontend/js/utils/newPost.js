@@ -10,7 +10,7 @@ if (!token) {
   location.href = 'index.html';
 }
 
-const form = document.querySelector('#addpost');
+const form = document.querySelector('#addPost');
 const title = document.querySelector('#title');
 const featured = document.querySelector('#featured');
 const longInfo = document.querySelector('#longInfo');
@@ -22,7 +22,7 @@ const submitForm = e => {
 
   message.innerHTML = '';
 
-  const titleValue = title.value.trim();
+  const titleValue = title.value;
   const longInfoValue = longInfo.value;
   const featuredValue = featured.value;
   const shortInfoValue = shortInfo.value;
@@ -35,18 +35,21 @@ const submitForm = e => {
     );
   }
 
-  addpost(titleValue, shortInfoValue, longInfoValue, featuredValue);
+  addPost(titleValue, shortInfoValue, longInfoValue, featuredValue);
 };
-form.addEventListener('submit', submitForm);
 
-export const addpost = async (title, longInfo, featured, shortInfo) => {
+if (submitForm) {
+  form.addEventListener('submit', submitForm);
+}
+
+export const addPost = async (title, shortInfo, longInfo, featured) => {
   const url = baseUrl + '/posts';
 
   const data = JSON.stringify({
     title: title,
+    shortInfo: shortInfo,
     longInfo: longInfo,
     featured: featured,
-    shortInfo: shortInfo,
   });
 
   const options = {

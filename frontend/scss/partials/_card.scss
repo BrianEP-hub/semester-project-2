@@ -1,0 +1,23 @@
+.card {
+  background-size: cover;
+  background-position: top center;
+  padding: 10rem 0 0;
+  max-width: 35ch;
+  border-radius: 5px;
+  width: 45%;
+  margin: 1rem;
+  &-content {
+    color: $color-dark-secondary;
+    padding: 2rem;
+  }
+  &-content-action {
+    padding: 0.8rem;
+    color: $color-text-primary;
+    background-color: $color-main-primary;
+    opacity: 0.8;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}

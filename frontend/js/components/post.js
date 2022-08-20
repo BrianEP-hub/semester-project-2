@@ -1,5 +1,6 @@
 export const getPost = posts => {
   const postContainer = document.querySelector('.container-post');
+  const featuredContainer = document.querySelector('.container-featured');
 
   postContainer.innerHTML = '';
 
@@ -11,7 +12,7 @@ export const getPost = posts => {
                                </div>
                                 <div class="card-content">
                                     <p>${post.shortInfo}</p>
-                                        <a class="card-content-action href="details.html?id=${post.id}">
+                                        <a class="card-content-action" href="details.html?id=${post.id}">
                                         Read more
                                         </a>
                                 </div>
@@ -33,7 +34,7 @@ export const getFeatured = posts => {
                                </div>
                                 <div class="card-content">
                                     <p>${post.shortInfo}</p>
-                                        <a class="card-content-action href="details.html?id=${post.id}">
+                                        <a class="card-content-action" href="details.html?id=${post.id}">
                                         Read more
                                         </a>
                                 </div>
