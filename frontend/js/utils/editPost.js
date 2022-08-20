@@ -17,7 +17,8 @@ const postUrl = baseUrl + '/posts/' + id;
 
 const form = document.querySelector('form');
 const title = document.querySelector('#title');
-const description = document.querySelector('#description');
+const longInfo = document.querySelector('#longInfo');
+const shortInfo = document.querySelector('#shortInfo');
 const featured = document.querySelector('#featured');
 const message = document.querySelector('.container-message');
 
@@ -27,8 +28,9 @@ const message = document.querySelector('.container-message');
     const details = await response.json();
 
     title.value = details.title;
-    description.value = details.description;
+    longInfo.value = details.longInfo;
     featured.value = details.featured;
+    shortInfo.value = shortInfo.featured;
 
     deleteButton(details.id);
   } catch (error) {
@@ -44,27 +46,29 @@ const editpost = e => {
   message.innerHTML = '';
 
   const titleValue = title.value.trim();
-  const descriptionValue = description.value;
+  const longInfoValue = longInfo.value;
   const featuredValue = featured.value;
+  const shortInfoValue = shortInfo.value;
 
-  if (titleValue.length === 0 || descriptionValue.length === 0) {
+  if (titleValue.length === 0 || longInfoValue.length === 0) {
     return displayMessage(
       'warning',
       'Please ensure that you have entered correct',
       '.container-message',
     );
   }
-  updatepost(titleValue, priceValue, descriptionValue, idValue, featuredValue);
+  updatepost(titleValue, shortInfoValue, longInfoValue, idValue, featuredValue);
 };
 form.addEventListener('submit', editpost);
 
-const updatepost = async (title, description, featured) => {
+const updatepost = async (title, longInfo, shortInfo, featured) => {
   const url = baseUrl + '/posts';
 
   const data = JSON.stringify({
     title: title,
-    description: description,
+    longInfo: longInfo,
     featured: featured,
+    shortInfo: shortInfo,
   });
 
   const options = {

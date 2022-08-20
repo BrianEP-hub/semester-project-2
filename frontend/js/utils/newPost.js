@@ -13,7 +13,8 @@ if (!token) {
 const form = document.querySelector('#addpost');
 const title = document.querySelector('#title');
 const featured = document.querySelector('#featured');
-const description = document.querySelector('#description');
+const longInfo = document.querySelector('#longInfo');
+const shortInfo = document.querySelector('#shortInfo');
 const message = document.querySelector('.container-message');
 
 const submitForm = e => {
@@ -22,10 +23,11 @@ const submitForm = e => {
   message.innerHTML = '';
 
   const titleValue = title.value.trim();
-  const descriptionValue = description.value;
+  const longInfoValue = longInfo.value;
   const featuredValue = featured.value;
+  const shortInfoValue = shortInfo.value;
 
-  if (titleValue.length === 0 || descriptionValue === 0) {
+  if (titleValue.length === 0 || longInfoValue === 0) {
     return displayMessage(
       'warning',
       'Please ensure that you have the correct inputs',
@@ -33,17 +35,18 @@ const submitForm = e => {
     );
   }
 
-  addpost(titleValue, priceValue, descriptionValue, featuredValue, imageValue);
+  addpost(titleValue, shortInfoValue, longInfoValue, featuredValue);
 };
 form.addEventListener('submit', submitForm);
 
-export const addpost = async (title, description, featured) => {
+export const addpost = async (title, longInfo, featured, shortInfo) => {
   const url = baseUrl + '/posts';
 
   const data = JSON.stringify({
     title: title,
-    description: description,
+    longInfo: longInfo,
     featured: featured,
+    shortInfo: shortInfo,
   });
 
   const options = {

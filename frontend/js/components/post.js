@@ -1,5 +1,3 @@
-import { baseUrl as url } from '../settings/api.js';
-
 export const getPost = posts => {
   const postContainer = document.querySelector('.container-post');
 

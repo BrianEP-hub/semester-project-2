@@ -12,8 +12,8 @@ const createMenu = () => {
   }">Login</a>`;
 
   if (username) {
-    authLink = `<a href="dashboard.html" class="navbar-menu-item-auth ${
-      pathname === '/dashboard.html' ? 'active' : ''
+    authLink = `<a href="admin.html" class="navbar-menu-item-auth ${
+      pathname === '/admin.html' ? 'active' : ''
     }">${username}</a> <button id="logout">Logout ${username}</button>
     `;
   }
@@ -21,7 +21,7 @@ const createMenu = () => {
   navbar.innerHTML = `
         <nav class="navbar-menu">
             <a href="/" class="navbar-menu-item ${
-              pathname === 'index.html' ? 'active' : ''
+              pathname === '/index.html' ? 'active' : ''
             }">Home</a>
             <a href="/posts.html" class="navbar-menu-item ${
               pathname === '/posts.html' ? 'active' : ''
