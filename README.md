@@ -2,7 +2,7 @@
 
 ## Backend login
 
-"admin"
+"admin@admin.com"
 "Pass1234"
 
 ## Compile scss
