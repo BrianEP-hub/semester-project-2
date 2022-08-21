@@ -1,10 +1,12 @@
 export const getPost = posts => {
   const postContainer = document.querySelector('.container-post');
-  const featuredContainer = document.querySelector('.container-featured');
 
   postContainer.innerHTML = '';
 
   posts.forEach(post => {
+    let dateTime = new Date(post.created_at);
+    let date = dateTime.toLocaleDateString();
+
     postContainer.innerHTML += `
                             <div class="card">
                                 <div class="card-title">
@@ -15,6 +17,7 @@ export const getPost = posts => {
                                         <a class="card-content-action" href="details.html?id=${post.id}">
                                         Read more
                                         </a>
+                                    <p>${date}</p>
                                 </div>
                             </div>
         `;

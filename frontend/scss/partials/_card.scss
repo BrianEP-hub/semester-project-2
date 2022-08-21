@@ -1,14 +1,17 @@
 .card {
   background-size: cover;
   background-position: top center;
+  background-color: $color-main-secondary;
   padding: 10rem 0 0;
   max-width: 35ch;
-  border-radius: 5px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   width: 45%;
   margin: 1rem;
-  &-content {
+  &-content,
+  &-title {
     color: $color-dark-secondary;
-    padding: 2rem;
+    padding: 20px;
   }
   &-content-action {
     padding: 0.8rem;

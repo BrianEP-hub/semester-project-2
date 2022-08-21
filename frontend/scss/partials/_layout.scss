@@ -1,0 +1,10 @@
+.container {
+  &-post,
+  &-featured {
+    display: flex;
+    justify-content: center;
+  }
+}
+.spacer {
+  flex: 0 0 10%;
+}

@@ -14,28 +14,27 @@
   </head>
   <body>
     <div class="navbar"></div>
-    <div class="container-posts"></div>
-    <div class="container-admin"></div>
+    <div class="container">
+      <div class="container-posts"></div>
+      <div class="container-admin"></div>
+    </div>
     <div class="modal-add-posts">
       <div class="modal-add-posts-content">
         <span class="close">&times;</span>
         <h2>Add product</h2>
-        <form id="addPost">
+        <form class="add-form" id="addPost">
           <div class="container-message"></div>
           <div>
-            <label for="title">Title</label>
-            <input id="title" type="text" />
+            <input class="title" id="title" type="text" placeholder="Title" />
           </div>
           <div>
-            <label for="shortInfo">Short text</label>
-            <textarea id="shortInfo"></textarea>
+            <textarea class="shortInfo" id="shortInfo" placeholder="Short info"></textarea>
           </div>
           <div>
-            <label for="longInfo">Post text</label>
-            <textarea id="longInfo"></textarea>
+            <textarea class="longInfo" id="longInfo" placeholder="Article body"></textarea>
           </div>
           <div>
-            <label for="featured">Featured</label>
+            <label class="featured" for="featured">Featured</label>
             <select name="featured" id="featured">
               <option value="true">Yes</option>
               <option value="false">No</option>

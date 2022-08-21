@@ -1,6 +1,10 @@
 @import 'partials/custom';
+@import 'partials/navbar';
+@import 'partials/layout';
+@import 'partials/details';
 @import 'partials/card';
 @import 'partials/modal';
+@import 'partials/form';
 
 body {
   background: $color-dark-tertiary;

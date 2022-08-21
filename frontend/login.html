@@ -10,17 +10,23 @@
   <body>
     <div class="navbar"></div>
     <div class="container-message"></div>
-    <form>
-      <label for="username">
-        Username
-        <input id="username" />
-      </label>
-      <label for="password">
-        Password
-        <input id="password" type="password" />
-      </label>
-      <button>Login</button>
-    </form>
+      <form id="login" class="login-form">
+        <h4>Login</h4>
+        <input
+          id="username"
+          type="text"
+          class="username"
+          placeholder="username"
+        />
+        <input
+          id="password"
+          type="password"
+          class="password"
+          placeholder="password"
+        />
+        <button class="login-button">Login</button>
+      </form>
+    </div>
 
     <script src="js/user/login.js" type="module"></script>
     <noscript>Please ensure you have JavaScript enabled.</noscript>

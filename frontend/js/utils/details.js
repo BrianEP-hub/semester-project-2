@@ -21,7 +21,7 @@ createMenu();
 
   container.innerHTML = `   
                             <div class="details-content">
-                                <h3 details-content-header>${details.title}</h3>
+                                <h3 class="details-content-header">${details.title}</h3>
                                 <p>${details.longInfo}</p>
                             </div>
                      
