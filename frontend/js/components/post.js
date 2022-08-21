@@ -30,18 +30,20 @@ export const getFeatured = posts => {
   featuredContainer.innerHTML = '';
 
   posts.forEach(post => {
-    featuredContainer.innerHTML += `
-                            <div class="card">
-                                <div class="card-title">
-                               <h3>${post.title}</h3>
-                               </div>
-                                <div class="card-content">
-                                    <p>${post.shortInfo}</p>
-                                        <a class="card-content-action" href="details.html?id=${post.id}">
-                                        Read more
-                                        </a>
-                                </div>
-                            </div>
-        `;
+    if (post.featured === true) {
+      return (featuredContainer.innerHTML += `
+        <div class="card">
+        <div class="card-title">
+        <h3>${post.title}</h3>
+        </div>
+        <div class="card-content">
+        <p>${post.shortInfo}</p>
+        <a class="card-content-action" href="details.html?id=${post.id}">
+        Read more
+        </a>
+        </div>
+        </div>
+        `);
+    }
   });
 };

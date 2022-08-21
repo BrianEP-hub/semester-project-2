@@ -2,7 +2,9 @@ import { deleteButton } from '../components/deleteButton.js';
 import { baseUrl } from '../settings/api.js';
 import { getToken } from './storage.js';
 import { displayMessage } from '../common/displayMessage.js';
+import createMenu from './createMenu.js';
 
+createMenu();
 const token = getToken();
 
 if (!token) {

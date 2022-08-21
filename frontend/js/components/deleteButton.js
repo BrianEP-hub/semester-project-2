@@ -4,9 +4,9 @@ import { getToken } from '../utils/storage.js';
 export const deleteButton = id => {
   const container = document.querySelector('.container-delete');
 
-  container.innerHTML = `<button type="button" class="delete">Delete</button>`;
+  container.innerHTML = `<button type="button" class="button-delete">Delete</button>`;
 
-  const button = document.querySelector('button.delete');
+  const button = document.querySelector('.button-delete');
 
   button.onclick = async () => {
     const doDelete = confirm('Delete post?');
