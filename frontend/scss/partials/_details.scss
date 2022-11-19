@@ -1,0 +1,11 @@
+.container-details {
+  display: flex;
+  padding: 2rem;
+  justify-content: center;
+}
+.details-content {
+  background-color: $color-dark-secondary;
+  color: $color-text-secondary;
+  padding: 1rem;
+  width: 30%;
+}

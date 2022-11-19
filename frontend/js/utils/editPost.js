@@ -2,7 +2,9 @@ import { deleteButton } from '../components/deleteButton.js';
 import { baseUrl } from '../settings/api.js';
 import { getToken } from './storage.js';
 import { displayMessage } from '../common/displayMessage.js';
+import createMenu from './createMenu.js';
 
+createMenu();
 const token = getToken();
 
 if (!token) {
@@ -45,7 +47,7 @@ const editpost = e => {
 
   message.innerHTML = '';
 
-  const titleValue = title.value.trim();
+  const titleValue = title.value;
   const longInfoValue = longInfo.value;
   const featuredValue = featured.value;
   const shortInfoValue = shortInfo.value;
@@ -57,11 +59,11 @@ const editpost = e => {
       '.container-message',
     );
   }
-  updatepost(titleValue, shortInfoValue, longInfoValue, idValue, featuredValue);
+  updatepost(titleValue, shortInfoValue, longInfoValue, featuredValue);
 };
 form.addEventListener('submit', editpost);
 
-const updatepost = async (title, longInfo, shortInfo, featured) => {
+const updatepost = async (title, shortInfo, longInfo, featured) => {
   const url = baseUrl + '/posts';
 
   const data = JSON.stringify({

@@ -12,7 +12,7 @@ const adminMenu = () => {
             <div>
             <button id="add">Add</button>
             <span class="spacer"></span>
-            <a href="edit.html">Edit</a>
+            <a href="edit.html" class="edit">Edit</a>
         `;
   }
 

@@ -1,0 +1,82 @@
+.login-form {
+  position: relative;
+  z-index: 1;
+  background: $color-dark-primary;
+  border-radius: 15px;
+  margin: 0 auto;
+  padding: 45px;
+  text-align: center;
+  max-width: 360px;
+  color: $color-text-primary;
+  .username,
+  .password {
+    outline: 0;
+    background: $color-text-secondary;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+
+  .login-button {
+    text-transform: uppercase;
+    background: $color-main-primary;
+    width: 100%;
+    border-radius: 10px;
+    padding: 15px;
+    border: 0;
+    color: $color-text-primary;
+    font-size: 14px;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    &:hover {
+      background: $color-main-secondary;
+    }
+  }
+}
+
+.add-form,
+.edit-form {
+  position: relative;
+  z-index: 1;
+  background: $color-dark-primary;
+  border-radius: 15px;
+  margin: 0 auto;
+  padding: 45px;
+  text-align: center;
+  max-width: 360px;
+  color: $color-text-primary;
+  .title,
+  .shortInfo,
+  .longInfo,
+  .featured {
+    outline: 0;
+    background: $color-text-secondary;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  .button-add,
+  .button-edit,
+  .button-delete {
+    text-transform: uppercase;
+    background: $color-main-primary;
+    width: 100%;
+    border-radius: 10px;
+    padding: 15px;
+    border: 0;
+    color: $color-text-primary;
+    font-size: 14px;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    margin-top: 10px;
+    &:hover {
+      background: $color-main-secondary;
+    }
+  }
+}

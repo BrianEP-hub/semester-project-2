@@ -2,3 +2,5 @@
 /backend
 /.vscode
 /frontend/css
+/report
+/node_modules

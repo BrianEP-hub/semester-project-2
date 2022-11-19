@@ -1,0 +1,25 @@
+.card {
+  background-size: cover;
+  background-position: top center;
+  background-color: $color-main-secondary;
+  max-width: 35ch;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 45%;
+  margin: 1rem;
+  &-content,
+  &-title {
+    color: $color-dark-secondary;
+    padding: 20px;
+  }
+  &-content-action {
+    padding: 0.8rem;
+    color: $color-text-primary;
+    background-color: $color-main-primary;
+    opacity: 0.8;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
