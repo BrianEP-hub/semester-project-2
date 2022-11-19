@@ -1,0 +1,25 @@
+{
+  "name": "semester-project-resit",
+  "version": "1.0.0",
+  "description": "This website is to serve as a one stop site for tech and info about development.\r As of now the text is just fill text from lorem ipsum, but as time goes it can evolve into a fully fledged site.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sass --watch frontend/scss:frontend/css & live-server",
+    "build": "sass frontend/scss:frontend/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrianEP-hub/semester-project-resit.git"
+  },
+  "author": "Brian Berglund",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrianEP-hub/semester-project-resit/issues"
+  },
+  "homepage": "https://github.com/BrianEP-hub/semester-project-resit#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "sass": "^1.56.1"
+  }
+}
