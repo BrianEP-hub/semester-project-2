@@ -27,3 +27,5 @@ Starts the applications live server, and sass comiler in --watch mode
 ### `npm build`
 Compiles SCSS files into css files in the frontend folder
 
+## Disclaimers
+Due to changes for hosting services, the API is currently unavailable.
