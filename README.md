@@ -18,6 +18,11 @@ The site is built up on HTML, CSS and JS, and no external JS frameworks was inte
 ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
 
 The backend API is built using Strapi Headless CMS v. 3.4 and deployed to Heroku hosting service.
+## Setup
+
+To set up the application download repo and run:
+### `npm install`
+
 
 ## Available scripts
 
